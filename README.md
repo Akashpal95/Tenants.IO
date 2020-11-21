@@ -1,6 +1,8 @@
 # Tenants.IO
 An end-to-end application for tenants to sign up and list their properties for potential renters.
+## You can visit this website here:
 
+# https://tenantsio.web.app/
 ## Description
 
 This is an admin panel application for tenants who wants to list their properties for renters.
@@ -8,9 +10,6 @@ This is a learning project and it has many implementations like a whole authenti
 all backed by a dynamic mix of both firebase, firebase Admin SDK and my own node.js server. 
 I have also tried to make it user interactive and added a bunch of notifications.
 And finally i've been able to host it using firebase hosting and firebase cloud functions.
-## You can visit this website here:
-
-# https://tenantsio.web.app/
 
 The functionalities include:
 1. Sign up/Sign in with email/password(Implemented using firebase authentication)

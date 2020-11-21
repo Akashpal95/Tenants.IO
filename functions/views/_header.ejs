@@ -1,0 +1,18 @@
+<header>
+    <a href="/">Tenants.IO</a>
+    <ul>
+        <% if (locals.uid){%>
+        <li>
+            <a href="/users/sessionLogout">sign out</a>
+        </li>
+
+        <%}else{%>
+        <li>
+            <a href="/users/sign-in">sign in</a>
+        </li>
+        <li>
+            <a href="/users/sign-up">sign up</a>
+        </li>
+        <%}%>
+    </ul>
+</header>

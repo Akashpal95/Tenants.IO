@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/assets/css/property_list.css">
+
+<div id="main-property-container">
+    <!-- <h4 class="xbold">Your Properties</h4> -->
+    <div id="property-list-container">
+
+        <div class="property-card" id="add-property-button">
+            <div style="margin:auto;display:flex;flex-direction: column;align-items: center;">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1237/1237946.svg" alt="add-icon"
+                    style="width:30px;margin:10px;">
+                <p>Add a property</p>
+            </div>
+        </div>
+        <%for(property of properties) {%>
+        <div class="property-card" id="<%=property.id%>">
+            <div class="img-container">
+                <img src="/assets/images/<%=property.name%>.svg" alt="villa" />
+                <!-- <p>Villa</p> -->
+            </div>
+            <div class="name-location-button-container">
+                <div class="name-location-container">
+                    <div class="name mid-font">
+                        <%=property.name%>
+                    </div>
+                    <div class="location gray small-font">
+                        <%=property.location%>
+                    </div>
+                </div>
+                <a href="/property/destroy/<%=property.id%>">
+                    <img class="delete-button" src="https://www.flaticon.com/svg/static/icons/svg/812/812853.svg"
+                        alt="delete-button">
+                </a>
+
+            </div>
+            <div class="rent-size-container">
+                <div class="size-container">
+                    <div class="size-icon">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/494/494970.svg">
+                    </div>
+                    <div class="size-info gray small-font">
+                        <%=property.bhk%> BHK
+                    </div>
+                </div>
+                <div class="rent-container">
+                    <div class="rent-icon">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/25/25473.svg">
+                    </div>
+                    <div class="rent-info">
+                        <span class="mid-font"><%=property.rent%></span> <span class="small-font gray">per month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div>
+
+<script src="/assets/js/property_list.js"></script>

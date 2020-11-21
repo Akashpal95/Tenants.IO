@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <%- style%>
+</head>
+
+<body>
+    <%- include('_header');%>
+
+    <main id="layout-main">
+        <%- body%>
+    </main>
+    <!-- <script src="script.js"></script> -->
+    <%- include('_footer');%>
+    <script>
+        <% if (locals.flash.success && locals.flash.success.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= locals.flash.success%>",
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+            locals.flash.success = "";
+        <%}%>
+        <% if (locals.flash.error && locals.flash.error.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= locals.flash.error%>",
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+            locals.flash.error = "";
+        <%}%>
+    </script>
+    <%-script%>
+</body>
+
+</html>

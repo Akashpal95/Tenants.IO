@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/assets/css/add_property.css">
+<div id="add-property-container">
+    <h3>What is your property type?</h3>
+    <form id="property-details-form">
+        <div id="property-type-container">
+
+            <input type="radio" name="property-name" id="villa" class="input-hidden" value="Villa" />
+            <label for="villa">
+                <div class="img-container">
+                    <img src="/assets/images/Villa.svg" alt="villa" />
+                    <p>Villa</p>
+                </div>
+            </label>
+            <input type="radio" name="property-name" id="apartment" class="input-hidden" value="Apartment" />
+            <label for="apartment">
+                <div class="img-container">
+                    <img src="/assets/images/Apartment.svg" alt="apartment" />
+                    <p>Apartment</p>
+                </div>
+
+            </label>
+            <input type="radio" name="property-name" id="house" class="input-hidden" value="House" />
+            <label for="house">
+                <div class="img-container">
+                    <img src="/assets/images/House.svg" alt="house" />
+                    <p>House</p>
+                </div>
+            </label>
+        </div>
+        <div id="property-info-container">
+            <input type="text" id="location" name="location" placeholder="Where's your property?" required>
+            <input type="text" id="bhk" name="bhk" placeholder="How many BHK?" required>
+            <input type="text" id="rent" name="rent" placeholder="What's the rent?" required>
+            <button type="submit" class="button"> Submit </button>
+        </div>
+
+    </form>
+</div>
+<script src="/assets/js/add_property.js"></script>

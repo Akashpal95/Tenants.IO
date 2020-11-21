@@ -1,0 +1,55 @@
+#find-account-container{
+    width:70vw;
+    /* height:40vh; */
+    display:flex;
+    margin:auto;
+    margin-top:200px;
+    box-shadow: 0px 6px 9px 4px #0000002e;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: white;
+    padding:10px;
+}
+#find-account-img{
+    width:200px;
+    height:200px;
+}
+#rigth-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.md-form{
+    margin:20px;
+}
+.btn{
+    background-color: #575989;
+    margin:auto;
+}
+.btn:hover{
+    background-color: #3f3d55;
+}
+@media screen and (max-width:900px){
+    #find-account-container{
+        width:90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:100px;
+    }
+    #find-account-img{
+        width:300px;
+        height:300px;
+    }
+    #rigth-container{
+        width:80%;
+    }
+    input{
+        width:400px;
+    }
+    #findBtn{
+        width:300px !important;
+    }
+}

@@ -1,0 +1,114 @@
+#add-property-container{
+  width:90vw;
+  /* height:70vh; */
+  margin:auto;
+  box-shadow: 0px 6px 9px 4px #0000002e;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  padding:10px;
+  margin-top:80px;
+}
+form{
+  width:100%;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+}
+#property-type-container{
+  display:flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+#property-info-container{
+  display:flex;
+  /* flex-wrap:wrap; */
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+.img-container{
+    width:200px;
+    height: 150px;
+  border-radius: 10%;
+  border: 2px solid #818181;
+  filter: grayscale(100%) opacity(50%);
+  /* filter:opacity(50%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+.img-container > p{
+    margin: 5px;
+  
+}
+/* img{
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+} */
+input[type=radio] + label img {
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+  padding:10px;
+ 
+}  
+input[type=radio]:checked + label .img-container {
+  filter:none;
+  border: 2px solid #3f3d55;
+  color:#3f3d55;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid gray;
+  width:200px;
+}
+input[type=text]:focus {
+  border-bottom: 2px solid #3f3d55;
+}
+.button {
+  background-color: #3f3d55; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  width:100px;
+}
+/* 3f3d55 */
+@media screen and (max-width:750px){
+  #property-type-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #property-info-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input{
+    width:50%;
+    margin:10px;
+  }
+  
+}
